@@ -46,9 +46,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(2),
   },
-  prices: {
-    backgroundColor: theme.palette.info.dark,
-  },
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -96,7 +93,9 @@ export default function Album() {
                 </Grid>
                 <Grid item>
                   <Link to="/about">
-                    <Button variant="outlined">About Us</Button>
+                    <Button color="secondary" variant="outlined">
+                      About Us
+                    </Button>
                   </Link>
                 </Grid>
               </Grid>

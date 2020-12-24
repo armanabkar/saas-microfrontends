@@ -35,10 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(2, 0, 3),
-    backgroundColor: theme.palette.info.dark,
   },
-  account: {
-    color: theme.palette.info.main,
+  link: {
+    color: theme.palette.info.dark,
   },
 }));
 
@@ -108,7 +107,7 @@ export default function SignUp({ onSignIn }) {
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="info" />}
+                control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
               />
             </Grid>
@@ -126,7 +125,7 @@ export default function SignUp({ onSignIn }) {
           <Grid container justify="center">
             <Grid item>
               <Link to="/auth/signin">
-                <span className={classes.account}>
+                <span className={classes.link}>
                   Already have an account? Sign in
                 </span>
               </Link>

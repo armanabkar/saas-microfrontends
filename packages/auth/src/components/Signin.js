@@ -35,13 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(2, 0, 3),
-    backgroundColor: theme.palette.info.dark,
   },
   footer: {
     marginTop: "7rem",
   },
-  account: {
-    color: theme.palette.info.main,
+  link: {
+    color: theme.palette.info.dark,
   },
 }));
 
@@ -101,8 +100,8 @@ export default function SignIn({ onSignIn }) {
           <Grid container justify="center">
             <Grid item>
               <Link to="/auth/signup">
-                <span className={classes.account}>
-                  {"Don't have an account? Sign Up"}
+                <span className={classes.link}>
+                  Don't have an account? Sign Up
                 </span>
               </Link>
             </Grid>

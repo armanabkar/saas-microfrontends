@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     flexWrap: "wrap",
     justifyContent: "space-between",
-    minHeight: "3rem",
+    minHeight: "2.5rem",
     paddingBottom: "0.5rem",
   },
   link: {
@@ -84,8 +84,8 @@ export default function Header({ isSignedIn, onSignOut }) {
             SaaS MicroFrontEnds
           </Typography>
           <Button
-            color="blue"
-            variant="outlined"
+            variant="text"
+            color="primary"
             className={classes.link}
             component={RouterLink}
             to={isSignedIn ? "/" : "/auth/signin"}

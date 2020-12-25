@@ -1,8 +1,11 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 import Copyright from "./Copyright";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -12,22 +15,21 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(4, 0, 2),
+    padding: theme.spacing(4, 8, 0),
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    marginTop: "6.5rem",
-    textAlign: "center",
+  heroButtons: {
+    marginTop: theme.spacing(4),
   },
 }));
 
-export default function About() {
+export default function Album() {
   const classes = useStyles();
 
   return (
-    <>
+    <main>
+      {/* Hero unit */}
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           <Typography
             component="h1"
             variant="h3"
@@ -58,19 +60,19 @@ export default function About() {
             animi voluptatibus optio corporis suscipit, quod ut tempore harum
             culpa possimus.
           </Typography>
+          <div className={classes.heroButtons}>
+            <Grid container spacing={2} justify="center">
+              <Grid item>
+                <Link to="/">
+                  <Button color="primary" variant="flat">
+                    Back to Home Page
+                  </Button>
+                </Link>
+              </Grid>
+            </Grid>
+          </div>
         </Container>
       </div>
-      <footer className={classes.footer}>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
-    </>
+    </main>
   );
 }

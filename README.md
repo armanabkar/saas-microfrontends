@@ -41,14 +41,12 @@ npm start
 
 # What is MicroFrontends(MFEs)?
 
-#### MFEs — microservices approach for modern web.
+> MFEs — microservices approach for modern web.
 
 <h2 align="center">
   <img src="https://miro.medium.com/max/711/1*xNMI0FGE3VrasgfBjqgJ0g.png" width="600px" />
   <br>
 </h2>
-
-## What is Micro Frontends?
 
 The idea behind Micro Frontends is to think about a website or web app as a composition of features which are owned by independent teams. Each team has a distinct area of business or mission it cares about and specialises in. A team is cross functional and develops its features end-to-end, from database to user interface.
 
